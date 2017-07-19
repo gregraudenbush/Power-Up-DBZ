@@ -1,0 +1,28 @@
+
+<form (submit)="powerup()">
+  <label for="power">Initial Power Level</label> 
+
+  <input type="number" name="power" min="1" max="100" (change)='power = $event.target.value'>
+
+  <button type="submit" style="background-color: lime;" onClick="javascript:void(0);">Calculate Power</button>
+</form>
+
+
+    <div class="top">
+      <app-human [myPower]="power"></app-human>
+    </div>
+    <div class="top">  
+      <app-saiyan [myPower]="power"> </app-saiyan>
+    </div>
+    <div class="top">
+      <app-supersaiyan [myPower]="power"> </app-supersaiyan>
+    </div>
+    <div class="bottom">
+      <app-supersaiyantwo [myPower]="power"> </app-supersaiyantwo>
+    </div>
+    <div class="bottom">
+      <app-supersaiyanthree [myPower]="power"> </app-supersaiyanthree>
+    </div>
+    <div class="bottom">
+      <app-supersaiyanfour [myPower]="power"> </app-supersaiyanfour>
+    </div>
